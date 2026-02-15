@@ -10,7 +10,7 @@ Copyright (c) 2000 Simon White
 
 Copyright (c) 2007-2010 Antti Lankila
 
-Copyright (c) 2010-2025 Leandro Nini (drfiemost@users.sourceforge.net)
+Copyright (c) 2010-2026 Leandro Nini (drfiemost@users.sourceforge.net)
 
 
 stilview
