@@ -17,6 +17,7 @@ AM_CPPFLAGS = \
 -I $(top_builddir)/src \
 -I $(top_srcdir)/src \
 -I $(top_srcdir)/libs/miniaudio \
+-I $(top_srcdir)/libs \
 -DPKGDATADIR="\"$(pkgdatadir)/\"" \
 $(SIDPLAYFP_CFLAGS) \
 $(STILVIEW_CFLAGS) \
@@ -29,9 +30,30 @@ src/sidplayfp \
 src/stilview
 
 #=========================================================
+#fmt
+fmt_SOURCES = \
+libs/fmt/args.h \
+libs/fmt/base.h \
+libs/fmt/chrono.h \
+libs/fmt/color.h \
+libs/fmt/compile.h \
+libs/fmt/core.h \
+libs/fmt/format-inl.h \
+libs/fmt/format.cc \
+libs/fmt/format.h \
+libs/fmt/os.cc \
+libs/fmt/os.h \
+libs/fmt/ostream.h \
+libs/fmt/printf.h \
+libs/fmt/ranges.h \
+libs/fmt/std.h \
+libs/fmt/xchar.h
+
+#=========================================================
 # sidplayfp
 
 src_sidplayfp_SOURCES = \
+$(fmt_SOURCES) \
 libs/miniaudio/osaudio_miniaudio.c \
 libs/miniaudio/osaudio.h \
 libs/miniaudio/miniaudio.h \
@@ -83,6 +105,7 @@ $(W32_LIBS)
 # stilview
 
 src_stilview_SOURCES = \
+$(fmt_SOURCES) \
 src/codeConvert.cpp \
 src/codeConvert.h \
 $(ICONV_SOURCES) \
