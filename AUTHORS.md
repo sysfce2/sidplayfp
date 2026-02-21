@@ -23,6 +23,11 @@ supplied contributions or code was derived from their work:
     Thibaut VARENE    - exSID support
     LouD              - USBSID-Pico support
 
+3rd party libraries:
+
+    David Reid        - miniaudio
+    Victor Zverovich  - fmt
+    Steffen Schümann  - filesystem
 
 Credit where credit is due, so if I missed anyone please let me know.
 

@@ -82,6 +82,10 @@ the character conversion requires presence of the POSIX/XSI iconv function famil
   https://github.com/mackron/miniaudio
   distributed under MIT license
 
+* fmt
+  https://github.com/fmtlib/fmt
+  distributed under MIT license
+
 * filesystem
   https://github.com/gulrak/filesystem
   distributed under MIT license
