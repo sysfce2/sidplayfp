@@ -108,37 +108,46 @@ Default is 0
 
 Use ANSI escape sequences to provide colored output.
 
-=item B<Char Top Left>=I<< <char> >>
+=item B<ASCII>=I<true|false>
 
-Character for the top left corner.
+Use ASCII characters in place of UNICODE Box-drawing characters.
 
-=item B<Char Top Right>=I<< <char> >>
+=item B<Color Decorations>=I<< <char> >>
 
-Character for the top right corner.
+Color for the decorations.
+May be one of black, red, green, yellow, blue, magenta, cyan, white, bright black, bright red, bright green, bright yellow, bright blue, bright magenta, bright cyan, bright white.
 
-=item B<Char Bottom Left>=I<< <char> >>
+=item B<Color Title>=I<< <char> >>
 
-Character for the bottom left corner.
+Color for the title.
 
-=item B<Char Bottom Right>=I<< <char> >>
+=item B<Color Label Core>=I<< <char> >>
 
-Character for the bottom right corner.
+Color for the labels in main section.
 
-=item B<Char Vertical>=I<< <char> >>
+=item B<Color Text Core>=I<< <char> >>
 
-Character for vertical lines.
+Color for the text in main section.
 
-=item B<Char Horizontal>=I<< <char> >>
+=item B<Color Label Extra>=I<< <char> >>
 
-Character for horizontal lines.
+Color for labels in extended sections.
 
-=item B<Char Junction Left>=I<< <char> >>
+=item B<Color Text Extra>=I<< <char> >>
 
-Character for left junctions.
+Color for text in extended sections.
 
-=item B<Char Junction Right>=I<< <char> >>
+=item B<Color Notes>=I<< <char> >>
 
-Character for right junctions.
+Color for notes.
+
+=item B<Color Control On>=I<< <char> >>
+
+Color for control on.
+
+=item B<Color Control Off>=I<< <char> >>
+
+Color for control off.
 
 =back
 
@@ -175,9 +184,9 @@ improve latency.
 
 =over
 
-=item B<Engine>=I<< <RESIDFP|RESID|HARDSID|EXSID|USBSID|NONE> >>
+=item B<Engine>=I<< <RESIDFP|SIDLITE|EXSID|USBSID|RESID|HARDSID|NONE> >>
 
-Set the SID emulation engine. Default is RESIDFP.
+Set the SID emulation engine. Default is RESIDFP if available.
 
 =item B<C64Model>=I<< <PAL|NTSC|OLD_NTSC|DREAN> >>
 
@@ -210,16 +219,10 @@ Enable digiboost for 8580 model.
 
 Enable/disable the emulation of the SID filter.
 
-=item B<FilterBias>=I<< <number> >>
-
-Controls the filter bias in the ReSID emulation.
-Ranges from 0.0 (dark) to 1.0 (light), the default
-value is 0.5.
-
 =item B<FilterCurve6581>=I<< <number> >>
 
 Controls the filter curve for the 6581 model in the ReSIDfp
-emulation.  Ranges from 0.0 (light) to 1.0 (dark), the default
+emulation.  Ranges from 0.0 (dark) to 1.0 (light), the default
 value is 0.5.
 
 =item B<FilterRange6581>=I<< <number> >>
@@ -231,7 +234,7 @@ value is 0.5.
 =item B<FilterCurve8580>=I<< <number> >>
 
 Controls the filter curve for the 8580 model in the ReSIDfp
-emulation.  Ranges from 0.0 (light) to 1.0 (dark), the default
+emulation.  Ranges from 0.0 (dark) to 1.0 (light), the default
 value is 0.5.
 
 =item B<CombinedWaveforms>=I<< <AVERAGE|WEAK|STRONG> >>
@@ -248,10 +251,6 @@ If greater than 8191 the delay will be random.
 
 Set resampling mode:  Interpolation (less expensive) or
 resampling (accurate).
-
-=item B<FastSampling>=I<< <true|false> >>
-
-Fast resampling, available only for reSID emulation.
 
 =back
 
@@ -297,6 +296,38 @@ Wrote the original SidTune library and MD5 class (based on work by L. Peter Deut
 
 Wrote the original man page.
 
+=item Stian Skjelstad
+
+SID status display.
+
+=item Michael Hartmann
+
+filter curves.
+
+=item Thibaut VARENE
+
+exSID support.
+
+=item LouD
+
+USBSID-Pico support.
+
+=item Craig Chamberlain and Harry Bratt
+
+Authors of COMPUTE!'s Sidplayer.
+
+=item David Reid
+
+Author of miniaudio.
+
+=item Victor Zverovich
+
+Author of fmt.
+
+=item Steffen Schümann
+
+Author of filesystem.
+
 =back
 
 
@@ -309,6 +340,8 @@ Wrote the original man page.
 =item Sidplay2 homepage: L<http://sidplay2.sourceforge.net/>
 
 =item High Voltage Sid Collection (HVSC): L<http://hvsc.c64.org/>
+
+=item Compute's Gazette Sid Collection (CGSG): L<https://www.c64music.co.uk/>
 
 =back
 
@@ -323,7 +356,7 @@ Wrote the original man page.
 
 =item Copyright (C) 2009-2015 VICE Project
 
-=item Copyright (C) 2010-2024 Leandro Nini
+=item Copyright (C) 2010-2026 Leandro Nini
 
 =back
 
