@@ -1,3 +1,11 @@
+3.0.0 2026-xx-xx
+* Use Miniaudio for audio output (#115)
+* Use ghc::filesystem to handle paths (#119)
+* Use fmt for terminal output (#116)
+* Display keyboard help while playing (#107)
+
+
+
 2.16.1 2026-02-15
 * Parse float arguments as locale independent (#118)
 * Use secure version of getenv on Windows
