@@ -568,7 +568,7 @@ private:
     const std::string msg;
 
 public:
-    iniError(const char* msg) : msg(msg) {}
+    explicit iniError(const char* msg) : msg(msg) {}
     const std::string message() const { return msg; }
 };
 

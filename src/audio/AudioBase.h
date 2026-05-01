@@ -39,7 +39,7 @@ protected:
         const char* m_msg;
 
     public:
-        error(const char* msg) : m_msg(msg) {}
+        explicit error(const char* msg) : m_msg(msg) {}
         const char* message() const { return m_msg; }
     };
 
@@ -63,7 +63,7 @@ protected:
     }
 
 public:
-    AudioBase(const char* name) :
+    explicit AudioBase(const char* name) :
         m_backendName(name),
         m_sampleBuffer(nullptr) {}
     ~AudioBase() override = default;

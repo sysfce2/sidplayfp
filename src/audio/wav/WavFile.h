@@ -100,7 +100,7 @@ private:
     int m_channels;
 
 public:
-    WavFile(const std::string &name);
+    explicit WavFile(const std::string &name);
     ~WavFile() override { close(); }
 
     static const char *extension () { return ".wav"; }

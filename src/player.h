@@ -272,7 +272,7 @@ private:
     inline bool tryOpenDatabase(const char *hvscBase, const char *suffix);
 
 public:
-    ConsolePlayer (const char * const name);
+    explicit ConsolePlayer(const char * const name);
     virtual ~ConsolePlayer() = default;
 
     void displayError(const char *error) const;

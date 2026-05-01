@@ -61,7 +61,7 @@ private:
     int m_channels;
 
 public:
-    auFile(const std::string &name);
+    explicit auFile(const std::string &name);
     ~auFile() override { close(); }
 
     static const char *extension () { return ".au"; }

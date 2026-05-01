@@ -36,7 +36,7 @@ private:
     std::string s;
 
 public:
-    compare(const char *str) : s(str) {}
+    explicit compare(const char *str) : s(str) {}
 
     bool operator () (T const &p) { return s.compare(p.first) == 0; }
 };

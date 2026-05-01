@@ -50,7 +50,7 @@ private:
         uint32_t rand_seed;
 
     public:
-        randomLCG(uint32_t seed) :
+        explicit randomLCG(uint32_t seed) :
             rand_seed(seed)
         {}
 
