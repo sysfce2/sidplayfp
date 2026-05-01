@@ -45,7 +45,7 @@ struct auHeader                         // little endian format
 /*
  * A basic AU output file type
  */
-class auFile: public AudioBase
+class auFile final : public AudioBase
 {
 private:
     std::string name;

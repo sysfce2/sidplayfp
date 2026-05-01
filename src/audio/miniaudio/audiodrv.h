@@ -30,7 +30,7 @@
 #include "../AudioBase.h"
 
 
-class Audio_Miniaudio: public AudioBase
+class Audio_Miniaudio final : public AudioBase
 {
 private:  // ------------------------------------------------------- private
     osaudio_t m_audioHandle;

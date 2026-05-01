@@ -32,7 +32,7 @@
  * Null audio driver used for hardsid, exSID and USBSID-Pico
  * and songlength detection
  */
-class Audio_Null: public AudioBase
+class Audio_Null final : public AudioBase
 {
 private:  // ------------------------------------------------------- private
     bool isOpen;

@@ -77,7 +77,7 @@ struct listInfo                         // little endian format
  * A basic WAV output file type
  * Initial implementation by Michael Schwendt <mschwendt@yahoo.com>
  */
-class WavFile: public AudioBase
+class WavFile final : public AudioBase
 {
 private:
     std::string name;
