@@ -127,7 +127,7 @@ static char keytable[] =
  */
 static int keyboard_search (char *cmd)
 {
-    for (char *p = keytable, *q = cmd;;  p++)
+    for (const char *p = keytable, *q = cmd;;  p++)
     {
         if (*p == *q)
         {

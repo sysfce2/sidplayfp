@@ -111,7 +111,7 @@ bool parseTime(const char *str, uint_least32_t &time)
         char *milli = (char *) strstr (sep+1, ".");
         if (milli)
         {
-            char *start = milli + 1;
+            const char *start = milli + 1;
             char *end;
             milliseconds = strtol(start, &end, 10);
             switch (end - start)

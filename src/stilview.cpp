@@ -180,7 +180,7 @@ void processArguments(int argc, char **argv)
                 case 't':
                 case 'T':
                 {
-                    char *tuneStr = getArgValue(argv[i]);
+                    const char *tuneStr = getArgValue(argv[i]);
                     if (tuneStr == nullptr) {
                         fmt::print(stderr, "ERROR: tune number was not specified correctly!\n");
                         printUsage();
