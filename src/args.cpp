@@ -813,7 +813,7 @@ void ConsolePlayer::displayArgs(const char *arg)
 #  ifdef FEAT_RESID_CAPS
         " -co          Set old caps for 6581\n"
 #  endif
-#endif
     );
+#endif
     fmt::print("\nHome Page: {}\n", PACKAGE_URL);
 }
