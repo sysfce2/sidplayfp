@@ -26,6 +26,7 @@
 
 #include <stdint.h>
 
+#include <numeric>
 #include <vector>
 
 #include "sidcxx11.h"
@@ -147,9 +148,7 @@ private:
     int_least32_t mono() const
     {
         static_assert((Chips >= 1) && (Chips <= 3), "Unsupported number of chips");
-        int_least32_t res = 0;
-        for (unsigned int i = 0; i < Chips; i++)
-            res += m_iSamples[i];
+        int_least32_t res = std::accumulate(m_iSamples.begin(), m_iSamples.end(), 0);
         return res * SCALE[Chips-1] / SCALE_FACTOR;
     }
 
