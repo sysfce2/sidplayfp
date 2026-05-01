@@ -32,11 +32,8 @@
 
 #include <memory>
 #include <new>
-
-
-#ifdef HAVE_UNISTD_H
-#  include <unistd.h>
-#endif
+#include <chrono>
+#include <thread>
 
 #include "utils.h"
 #include "keyboard.h"
@@ -1121,10 +1118,9 @@ bool ConsolePlayer::play()
         frames = samples / m_driver.cfg.channels;
 #endif
     }
-#ifdef HAVE_UNISTD_H
     else
-        usleep(100000);
-#endif
+        // don't choke the processor
+        std::this_thread::sleep_for(std::chrono::microseconds(100000));
 
     switch (m_state)
     {
