@@ -47,9 +47,9 @@ struct fill {
 
 template <>
 struct fmt::formatter<fill> {
-  constexpr const char* parse(format_parse_context& ctx) const { return ctx.begin(); }
+  static constexpr const char* parse(format_parse_context& ctx) { return ctx.begin(); }
 
-  fmt::basic_appender<char> format(fill f, format_context& ctx) const {
+  static fmt::basic_appender<char> format(fill f, format_context& ctx) {
     auto it = ctx.out();
     for (int i = 0; i < f.width; ++i)
         it = std::copy_n(f.value.begin(), f.value.size(), it);

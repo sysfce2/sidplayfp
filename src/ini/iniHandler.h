@@ -47,9 +47,9 @@ private:
     bool changed;
 
 private:
-    std::string parseSection(const std::string &buffer);
+    static std::string parseSection(const std::string &buffer);
 
-    stringPair_t parseKey(const std::string &buffer);
+    static stringPair_t parseKey(const std::string &buffer);
 
 public:
     iniHandler();
