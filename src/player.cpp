@@ -475,7 +475,7 @@ ConsolePlayer::ConsolePlayer (const char * const name) :
     m_engine.setRoms(kernalRom.get(), basicRom.get(), chargenRom.get());
 }
 
-std::string ConsolePlayer::getFileName(const SidTuneInfo *tuneInfo, const char* ext)
+std::string ConsolePlayer::getFileName(const SidTuneInfo *tuneInfo, const char* ext) const
 {
     std::string title;
 
@@ -1252,7 +1252,7 @@ void ConsolePlayer::updateDisplay()
     m_timer.current = milliseconds;
 }
 
-void ConsolePlayer::displayError(const char *error)
+void ConsolePlayer::displayError(const char *error) const
 {
     fmt::print(stderr, "{}: {}\n", m_name, error);
 }

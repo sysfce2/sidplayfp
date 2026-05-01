@@ -134,10 +134,10 @@ public:
     void read ();
 
     // Sidplayfp Specific Section
-    const sidplay2_section&  sidplay2  () { return sidplay2_s; }
-    const console_section&   console   () { return console_s; }
-    const audio_section&     audio     () { return audio_s; }
-    const emulation_section& emulation () { return emulation_s; }
+    const sidplay2_section&  sidplay2  () const { return sidplay2_s; }
+    const console_section&   console   () const { return console_s; }
+    const audio_section&     audio     () const { return audio_s; }
+    const emulation_section& emulation () const { return emulation_s; }
 };
 
 #endif // INICONFIG_H

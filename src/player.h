@@ -247,8 +247,8 @@ private:
 
 private:
     // Console
-    void consoleTable   (table_t table);
-    void consoleRestore (void);
+    void consoleTable   (table_t table) const;
+    void consoleRestore () const;
 
     // Command line args
     void displayArgs    (const char *arg = nullptr);
@@ -266,7 +266,7 @@ private:
 
     const char *getNote(uint16_t freq);
 
-    std::string getFileName(const SidTuneInfo *tuneInfo, const char* ext);
+    std::string getFileName(const SidTuneInfo *tuneInfo, const char* ext) const;
 
     inline bool tryOpenTune(const char *hvscBase);
     inline bool tryOpenDatabase(const char *hvscBase, const char *suffix);
@@ -275,7 +275,7 @@ public:
     ConsolePlayer (const char * const name);
     virtual ~ConsolePlayer() = default;
 
-    void displayError(const char *error);
+    void displayError(const char *error) const;
 
     int  args  (int argc, const char *argv[]);
     bool open  (void);

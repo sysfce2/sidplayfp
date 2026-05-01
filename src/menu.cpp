@@ -624,7 +624,7 @@ void ConsolePlayer::refreshRegDump()
 }
 
 // Display menu outline
-void ConsolePlayer::consoleTable(table_t table)
+void ConsolePlayer::consoleTable(table_t table) const
 {
     switch (table)
     {
@@ -666,7 +666,7 @@ void ConsolePlayer::consoleTable(table_t table)
 
 
 // Restore Ansi Console to defaults
-void ConsolePlayer::consoleRestore ()
+void ConsolePlayer::consoleRestore() const
 {
     if ((m_iniCfg.console ()).ansi) {
         fmt::print("\x1b[?25h");
