@@ -62,7 +62,7 @@ jobs:
         tar -xf libresidfp*.tar.gz
         cd libresidfp*/.
         ./configure --disable-dependency-tracking --disable-shared --enable-static --with-simd=runtime
-        make && sudo make install
+        make && make install
     - uses: dsaltares/fetch-gh-release-asset@master
       with:
         repo: 'libsidplayfp/libsidplayfp'
@@ -78,7 +78,7 @@ jobs:
         tar -xf libsidplayfp*.tar.gz
         cd libsidplayfp*/.
         ./configure --disable-dependency-tracking --disable-shared --enable-static ${{matrix.cfg_parms}}
-        make && sudo make install
+        make && make install
     - uses: actions/checkout@v6
       with:
         ref: ${{ github.ref }}

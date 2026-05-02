@@ -648,7 +648,7 @@ std::string getConfigPath()
     return configPath;
 }
 
-bool tryOpen(MAYBE_UNUSED const iniHandler &ini)
+bool tryOpen(MAYBE_UNUSED iniHandler &ini)
 {
 #ifdef _WIN32
     {
