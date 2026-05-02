@@ -1,8 +1,11 @@
-3.0.0 2026-xx-xx
+3.0.0 2026-05-02
 * Use Miniaudio for audio output (#115)
 * Use ghc::filesystem to handle paths (#119)
 * Use fmt for terminal output (#116)
 * Display keyboard help while playing (#107)
+* Allow customization of console colors  (#23)
+* Allow using sidlite engine if available
+* Allow configuring old 6581 caps if available
 
 
 
