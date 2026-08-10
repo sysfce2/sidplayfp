@@ -1,5 +1,7 @@
-3.2.0 2026-0x-xx
+3.2.0 2026-08-10
 * Allow building with system fmt
+* Support new residfp tunables
+* Update ghc::filesystem to v1.5.16
 
 
 
