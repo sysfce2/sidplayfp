@@ -27,7 +27,7 @@ jobs:
 
     steps:
     - name: deps
-      run: sudo apt-get install gettext libsidplayfp-dev libstilview-dev
+      run: sudo apt-get update && sudo apt-get install gettext libsidplayfp-dev libstilview-dev
     - name: Checkout repository
       uses: actions/checkout@v7
 
